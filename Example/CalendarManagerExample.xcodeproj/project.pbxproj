@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		520D4E92266005EC00AFCFD8 /* BwCalendar */ = {isa = PBXFileReference; lastKnownFileType = folder; name = BwCalendar; path = ..; sourceTree = "<group>"; };
 		76B0FBB8233247FD00A28EAE /* CalendarManagerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalendarManagerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76B0FBBB233247FD00A28EAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76B0FBBD233247FD00A28EAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		76B0FBAF233247FD00A28EAE = {
 			isa = PBXGroup;
 			children = (
+				520D4E92266005EC00AFCFD8 /* BwCalendar */,
 				76B0FBD92332550100A28EAE /* README.md */,
 				76B0FBBA233247FD00A28EAE /* CalendarManagerExample */,
 				76B0FBB9233247FD00A28EAE /* Products */,
