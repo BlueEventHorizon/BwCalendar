@@ -8,6 +8,7 @@
 
 import EventKit // Create, view, and edit calendar and reminder events.
 import BwTools
+import InfoPlistKeys
 
 // https://developer.apple.com/documentation/eventkit
 
@@ -35,7 +36,7 @@ public final class CalendarManager: CalendarManagerProtocol {
 
     // 認証ステータスを取得
     public func authorize(completion: ((_ result: Bool) -> Void)?) {
-        guard InfoPlistChecker.calendarsUsageDescription != nil else {
+        guard InfoPlistKeys.calendarsUsageDescription.getValue() != nil else {
             log.error("No info.plist property for Calendar", instance: self)
             return
         }
