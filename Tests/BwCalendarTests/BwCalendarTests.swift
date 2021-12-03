@@ -1,8 +1,6 @@
-    import XCTest
-    @testable import BwCalendar
+@testable import BwCalendar
+import XCTest
 
-    final class BwCalendarTests: XCTestCase {
-        func testExample() {
- 
-        }
-    }
+final class BwCalendarTests: XCTestCase {
+    func testExample() {}
+}

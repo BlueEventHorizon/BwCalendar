@@ -6,8 +6,8 @@
 //  Copyright (c) 2018 k2moons. All rights reserved.
 //
 
-import EventKit // Create, view, and edit calendar and reminder events.
 import BwTools
+import EventKit // Create, view, and edit calendar and reminder events.
 import InfoPlistKeys
 
 // https://developer.apple.com/documentation/eventkit
@@ -100,7 +100,7 @@ public final class CalendarManager: CalendarManagerProtocol {
                 let eventIdentifier = event.eventIdentifier ?? ""
                 let title = event.title ?? "タイトルなし"
                 let period = event.endDate.timeIntervalSince1970 - event.startDate.timeIntervalSince1970
-                let hour: Double = round(period * 100 / 3600.0) / 100
+                let hour: Double = round(period * 100 / 3_600.0) / 100
 
                 log.info("eventIdentifier = \(eventIdentifier)", instance: self)
                 log.info("\(title) : \(hour) : \(event.isAllDay ? "全日" : "")", instance: self)

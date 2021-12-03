@@ -12,7 +12,8 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "BwCalendar",
-            targets: ["BwCalendar"]),
+            targets: ["BwCalendar"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/BlueEventHorizon/BwTools.git", .branch("main")),
@@ -22,9 +23,11 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "BwCalendar",
-            dependencies: ["BwTools"]),
+            dependencies: ["BwTools"]
+        ),
         .testTarget(
             name: "BwCalendarTests",
-            dependencies: ["BwCalendar"]),
+            dependencies: ["BwCalendar"]
+        ),
     ]
 )
