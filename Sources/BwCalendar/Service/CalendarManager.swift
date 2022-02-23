@@ -6,9 +6,9 @@
 //  Copyright (c) 2018 k2moons. All rights reserved.
 //
 
-import BwTools
 import EventKit // Create, view, and edit calendar and reminder events.
-import InfoPlistKeys
+import BwTools
+import BwInformation
 
 // https://developer.apple.com/documentation/eventkit
 
