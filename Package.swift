@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version: 5.6
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -16,8 +16,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        //.package(url: "https://github.com/BlueEventHorizon/BwLogger.git", from: "5.0.1"),
-        .package(url: "https://github.com/BlueEventHorizon/BwTools.git", from: "3.0.11"),
+        .package(url: "https://github.com/BlueEventHorizon/BwTools.git", from: "3.3.6"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.

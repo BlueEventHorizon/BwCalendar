@@ -8,7 +8,6 @@
 
 import EventKit // Create, view, and edit calendar and reminder events.
 import BwTools
-import BwInformation
 
 // https://developer.apple.com/documentation/eventkit
 
@@ -33,6 +32,8 @@ public final class CalendarManager: CalendarManagerProtocol {
     private lazy var eventStore: EKEventStore = { EKEventStore() }()
     private lazy var defaultCalendar = { eventStore.defaultCalendarForNewEvents }()
     public private(set) lazy var calendars: [EKCalendar] = { [EKCalendar]() }()
+
+    let log = CalendarManager.log
 
     // 認証ステータスを取得
     public func authorize(completion: ((_ result: Bool) -> Void)?) {
@@ -207,3 +208,18 @@ public final class CalendarManager: CalendarManagerProtocol {
         print(keywords)
     }
 }
+
+extension CalendarManager {
+    /// user could setoutput or append outputs for Logger
+    static let log = Logger([], levels: nil)
+
+    public static func setDefaultLoggerOutput() {
+        Self.log.setLevel(nil)
+        #if targetEnvironment(simulator)
+            log.setLogOutput([PrintLogger()])
+        #else
+            log.setLogOutput([OsLogger(subsystem: "beowulf-tech.BwContacts", category: "BwTools")])
+        #endif
+    }
+}
+
