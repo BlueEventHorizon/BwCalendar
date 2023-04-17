@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "BwCalendar",
     platforms: [
-        .iOS(.v13),
+        .iOS(.v14),
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
@@ -16,7 +16,8 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/BlueEventHorizon/BwTools.git", from: "3.3.6"),
+        //.package(url: "https://github.com/BlueEventHorizon/BwTools.git", from: "3.3.6"),
+        .package(url: "https://github.com/BlueEventHorizon/BwTools.git", branch: "develop"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
